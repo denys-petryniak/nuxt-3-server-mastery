@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: pokemon, error } = await useFetch("/api/d");
+const { data: pokemon, error } = await useFetch("/api/scizor");
 </script>
 
 <template>
