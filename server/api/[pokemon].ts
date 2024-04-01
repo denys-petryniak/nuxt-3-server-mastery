@@ -2,9 +2,7 @@ import type { Pokemon } from "~/types/pokemon";
 
 export default defineEventHandler(async (event) => {
   try {
-    const { pokemon } = event.context.params as {
-      pokemon: string;
-    };
+    const pokemon = getRouterParam(event, "pokemon");
 
     const response = await $fetch<Pokemon>(
       `https://pokeapi.co/api/v2/pokemon/${pokemon}`
