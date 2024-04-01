@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const { data: pokemon, error } = await useFetch("/api/scizor");
+const { data: pokemon, error } = await useFetch("/api/pikachu");
 </script>
 
 <template>
   <h1>Nuxt 3 Server Mastery</h1>
   <ul v-if="pokemon">
     <li>
-      <img :src="pokemon.sprite" alt="" />
+      <img :src="pokemon.image" alt="" />
     </li>
     <li>{{ pokemon.id }}: {{ pokemon.name }}</li>
   </ul>
